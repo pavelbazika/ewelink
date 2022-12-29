@@ -2,18 +2,18 @@
 
 Ewelink SDK to control your eWelink smart devices. 
 
-[![Build Status](https://github.com/NicklasWallgren/ewelink/workflows/Test/badge.svg)](https://github.com/NicklasWallgren/ewelink/actions?query=workflow%3ATest)
-[![Reviewdog](https://github.com/NicklasWallgren/ewelink/workflows/reviewdog/badge.svg)](https://github.com/NicklasWallgren/ewelink/actions?query=workflow%3Areviewdog)
-[![Go Report Card](https://goreportcard.com/badge/github.com/NicklasWallgren/ewelink)](https://goreportcard.com/report/github.com/NicklasWallgren/ewelink)
-[![GoDoc](https://godoc.org/github.com/NicklasWallgren/ewelink?status.svg)](https://godoc.org/github.com/NicklasWallgren/ewelink)
+[![Build Status](https://github.com/pavelbazika/ewelink/workflows/Test/badge.svg)](https://github.com/pavelbazika/ewelink/actions?query=workflow%3ATest)
+[![Reviewdog](https://github.com/pavelbazika/ewelink/workflows/reviewdog/badge.svg)](https://github.com/pavelbazika/ewelink/actions?query=workflow%3Areviewdog)
+[![Go Report Card](https://goreportcard.com/badge/github.com/pavelbazika/ewelink)](https://goreportcard.com/report/github.com/pavelbazika/ewelink)
+[![GoDoc](https://godoc.org/github.com/pavelbazika/ewelink?status.svg)](https://godoc.org/github.com/pavelbazika/ewelink)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/cabd5fbbcde543ec959fb4a3581600ed)](https://app.codacy.com/gh/NicklasWallgren/ewelink?utm_source=github.com&utm_medium=referral&utm_content=NicklasWallgren/ewelink&utm_campaign=Badge_Grade)
 
-Check out the API Documentation http://godoc.org/github.com/NicklasWallgren/ewelink
+Check out the API Documentation http://godoc.org/github.com/pavelbazika/ewelink
 
 # Installation
 The library can be installed through `go get` 
 ```bash
-go get github.com/NicklasWallgren/ewelink
+go get github.com/pavelbazika/ewelink
 ```
 
 # Supported versions
@@ -31,7 +31,7 @@ We support the two major Go versions, which are 1.15 and 1.16 at the moment.
 import (
     "context"
     "fmt"
-    "github.com/NicklasWallgren/ewelink"
+    "github.com/pavelbazika/ewelink"
 )
 
 instance := ewelink.New()
