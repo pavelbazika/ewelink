@@ -69,12 +69,14 @@ func (e Ewelink) GetDevices(ctx context.Context, session *Session) (*DevicesResp
 
 // GetDevice - Returns information about a device.
 func (e Ewelink) GetDevice(ctx context.Context, session *Session, deviceID string) (*Device, error) {
-	devices, err := e.GetDevices(ctx, session)
+	request := newGetDeviceRequest(createDeviceQuery(session), session, deviceID)
+
+	response, err := e.call(ctx, request)
 	if err != nil {
 		return nil, err
 	}
 
-	return devices.getDeviceByID(deviceID)
+	return &response.(*DeviceResponse).Device, nil
 }
 
 // SetDevicePowerState - Toggles the outlet(s) of a device.

@@ -89,6 +89,15 @@ func newAuthenticationRequest(payload *emailAuthenticationPayload, session *Sess
 	return &httpRequest{method: "POST", uri: "user/login", payload: payload, response: &AuthenticationResponse{}, isSigned: true, session: session}
 }
 
+func newGetDeviceRequest(query *url.Values, session *Session, deviceId string) HTTPRequest {
+	query.Add("deviceid", deviceId)
+
+	headers := &http.Header{}
+	headers.Add("Authorization", "Bearer "+session.AuthenticationToken)
+
+	return &httpRequest{method: "GET", uri: "user/device/" + deviceId, headers: headers, query: query, response: &DeviceResponse{}, session: session}
+}
+
 func newGetDevicesRequest(query *url.Values, session *Session) HTTPRequest {
 	headers := &http.Header{}
 	headers.Add("Authorization", "Bearer "+session.AuthenticationToken)
