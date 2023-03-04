@@ -213,6 +213,8 @@ type Device struct {
 		BindInfos     struct {
 			Gaction []string `json:"gaction"`
 		} `json:"bindInfos"`
+		CurrentTemperature string `json:"currentTemperature"`
+		CurrentHumidity    string `json:"currentHumidity"`
 	} `json:"params"`
 	OfflineTime  time.Time     `json:"offlineTime"`
 	DeviceStatus string        `json:"deviceStatus"`
